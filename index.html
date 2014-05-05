@@ -1,0 +1,317 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Lambda Lessons</title>
+
+		<meta name="description" content="A YOW! Lambda Jam presentation">
+		<meta name="author" content="Katie Miller">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/blackboard.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+		<script>
+			if( window.location.search.match( /print-pdf/gi ) ) {
+				var link = document.createElement( 'link' );
+				link.rel = 'stylesheet';
+				link.type = 'text/css';
+				link.href = 'css/print/pdf.css';
+				document.getElementsByTagName( 'head' )[0].appendChild( link );
+			}
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+        <style>
+            .engrish { height: 350px; margin: 0 !important; }
+            .initial-front { z-index: 2; position: absolute; left: 210px; }
+                       
+        </style>
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+                <section>
+				    <section>
+					    <h1>Lambda Lessons</h1>
+                        <img src="images/chalklambda.png" width="250px"/>
+                        <p style="font-size: 1.7em;">Katie Miller (<a href="http://twitter.com/codemiller" target="_blank">@codemiller</a>)</p>
+				    </section>
+                    <section>
+                        <img src="images/hand-grenade.jpg" class="engrish"/>
+                        <img src="images/internet-hole.jpg" class="engrish"/>
+                        <img src="images/broadbang-network.jpg" class="engrish"/>
+                        <img src="images/dying-prohibited.jpg" class="engrish"/>
+                    </section>
+                </section>
+                <section>
+                    <h3>Background: Who Am I?</h3>
+                    <ul>
+                        <li class="fragment"><a href="http://openshift.com" target="_blank">OpenShift</a> Developer Advocate at <a href="http://redhat.com" target="_blank">Red Hat</a></li>
+                        <li class="fragment">Former newspaper journalist</li>
+                        <li class="fragment">Teaching experiences include: <a href="http://www-07.ibm.com/employment/au/diversity/women.html" target="_blank">IBM EXITE Camps</a> for teenage girls, <a href="http://www.railsgirls.com" target="_blank">Rails Girls</a> workshops, the NICTA <a href="http://www.lambdaladies.com" target="_blank">Lambda Ladies</a> event, and various conference workshops and presentations</li>
+                    </ul>    
+                </section>
+                <section>
+                    <section>
+                        <h3>Motivation: Why Teach FP?</h3>
+                        <img class="fragment" data-fragment-index="1" src="images/awesome.jpg" style="height: 350px;"/>
+                        <ul>
+                            <li class="fragment" data-fragment-index="1">FP is awesome</li>
+                            <li class="fragment">It may not look that way to outsiders</li>
+                            <li class="fragment">Sharing the awesomeness is to the community's benefit</li>
+                        </ul>    
+                    </section>
+                    <section>
+                        <h3>FP Is Awesome</h3>
+                        <span class="fragment">"[W]e're going to be living in a multicore, distributed, concurrent &ndash; all the buzz words &ndash; world. The conventional models we've been doing, the OO stuff...is not going to survive in that kind of environment. We're already seeing it beginning to fall apart." </br>&ndash; <a href="http://programming.oreilly.com/2014/04/fun-functional-and-teachable.html" target="_blank">Pragmatic Programmer Dave Thomas</a></span>
+                    </section>
+                    <section>
+                        <h3>There Are FP Learning Barriers</h3>
+                        <a href="http://www.zazzle.com.au/monad_shirt-235133473927904318" target="_blank"><img class="fragment" data-fragment-index="1" src="images/monadtshirt.jpg"/></a>
+                    </section>
+                    <section>
+                        <h3>Sharing FP Has Benefits</h3>
+                        <ul>
+                            <li class="fragment">More programmers writing more functional code: software, libraries, languages</li>
+                            <li class="fragment">Larger community helping FP to become more mainstream, leading to more FP jobs</li>
+                            <li class="fragment">More diversity of ideas, <a href="http://images.forbes.com/forbesinsights/StudyPDFs/Innovation_Through_Diversity.pdf" target="_blank">driving innovation</a></li>
+                        </ul>    
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <h3>Areas to Consider</h3>
+                        <img src="images/teacherspet.jpg"/>
+                    </section>
+                    <section>
+                        <h3>Curricula and Pedagogy</h3>
+                        <ul>
+                            <li class="fragment">Set clear learning goals</li>
+                            <li class="fragment">Choose primary emphasis: problem solving, language learning, project completion</li>
+                            <li class="fragment">Consider your target audience; build on what they already know</li>
+                            <li class="fragment">Plan a series of small, attainable tasks leading to the end goals</li>
+                            <li class="fragment">Use a variety of teaching mediums, including visual stimuli</li>
+                        </ul>    
+                    </section>
+                    <section>
+                        <h3>Language Choice</h3>
+                        <img src="images/battle.jpg" class="fragment fade-out initial-front" data-fragment-index="1"/>
+                        <ul>
+                            <li class="fragment" data-fragment-index="1">The best choice may depend on the individual</li>
+                            <li class="fragment">Syntax has a significant impact on novices</li>
+                            <li class="fragment">Language selection should tie in with learning goals</li>
+                            <li class="fragment">Some possible choices: <span class="fragment">Lisps (Scheme, Clojure)</span><span class="fragment">, Haskell</span><span class="fragment">, and Elixir</span></li>
+                        </ul>    
+                    </section>
+                    <section>
+                        <h3>Teaching Tools</h3>
+                        <ul>
+                            <li class="fragment">Professional tools are not built with beginners in mind; keep it simple, and explain tools</li>
+                            <li class="fragment">Beginners are easily frustrated with obscure error messages; choose tools that help students recognise/overcome them</li>
+                            <li class="fragment">Environment set-up can be a major pain point; consider using the cloud</li>
+                        </ul>    
+                    </section>
+                 </section> 
+                <section>
+                    <section>
+                        <h3>Experience Report 1: NICTA Lambda Ladies Workshop</h3>
+                        <img src="images/lambdaladiesevent.jpg" style="width: 500px; height: 350px;"/>
+                        <img src="images/lasercutlambdas.jpg" style="width: 500px; height: 350px;"/>
+                    </section>
+                    <section>
+                        <h3>Overview</h3>
+                        <ul>
+                            <li>Free, three-day event held at Red Hat Brisbane in March</li>
+                            <li class="fragment">Content based on the <a href="https://github.com/nicta/course" target="_blank">NICTA open source, functional programming in Haskell course</a></li>
+                            <li class="fragment">First NICTA event to include the <a href="http://www.lambdaladies.com" target="_blank">Lambda Ladies</a> branding and explicitly invite women</li>
+                            <li class="fragment">Instructors included Tony Morris, Mark Hibberd, and myself, with help from Dave Laing</a></li>
+                            <li class="fragment">Women were given preference, but men were also able to apply/attend; we accepted 16 women and 11 men</li>
+                        </ul>    
+                    </section>
+                    <section>
+                        <h3>What Went Well</h3>
+                        <ul>
+                            <li class="fragment">On day one, there were 12 women among 23 students (52%); over the next two days, numbers dropped but the percentage remained similar, 53-55% women</li>
+                            <li class="fragment">There was good ratio of instructors to students</li>
+                            <li class="fragment">Writing built-in Haskell functions enhanced understanding</li>
+                            <li class="fragment">There was lots of fundamental, relevant content</li>
+                            <li class="fragment">The expectation was set at the start that it was OK to not follow every detail</li>
+                        </ul>    
+                    </section>
+                    <section>
+                        <h3>Issues Encountered</h3>
+                        <ul>
+                            <li class="fragment">The value and goals of the course weren't clearly defined</li>
+                            <li class="fragment">Not everyone was familiar with the tools and there was no time set aside for explaining them</li>
+                            <li class="fragment">Several ran into issues with whitespace in Haskell</li>
+                            <li class="fragment">Levels of expertise and pace varied greatly among students</li>
+                            <li class="fragment">Some felt there was too much content</li>
+                        </ul>    
+                    </section>
+                    <section>
+                        <h3>Lessons Learnt</h3>
+                        <ul>
+                            <li class="fragment">If you want women to come to your workshop, invite them</li>
+                            <li class="fragment">Make sure it is clear if your workshop will be a mixed gender event; some prefer a woman-only learning environment</li>
+                            <li class="fragment">Include visual representations of key concepts</li>
+                            <li class="fragment">Offer slides/handouts</li>
+                            <li class="fragment">Make sure all instructors deliver some of the content; different perspectives are valuable</li>
+                            <li class="fragment">Have official answers to exercises readily available</li>
+                        </ul>    
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <h3>Experience Report 2: Haskell in the Cloud Workshop</h3>
+                        <img src="images/codemania2014.jpg" style="width: 500px; height: 340px;"/>
+                        <img src="images/haskellcloudworkshoptweet.png" style="width: 500px; height: 340px;"/>
+                    </section>
+                    <section>
+                        <h3>Overview</h3>
+                        <ul>
+                            <li class="fragment">Four-hour workshop at Codemania Auckland conference in April</li>
+                            <li class="fragment">Taught by myself and Tony Morris</li>
+                            <li class="fragment">17 registered participants (all men)</li>
+                            <li class="fragment"><a href="https://github.com/codemiller/fp-in-the-cloud" target="_blank">Brand new course content</a>, focused on Haskell basics and creating a Scotty web app in the cloud with the <a href="http://www.openshift.com" target="_blank">OpenShift PaaS</a></li>
+                        </ul>    
+                    </section>
+                    <section>
+                        <h3>Demo</h3>
+                        <img src="images/hamsterwheel.gif" style="width: 600px;"/>
+                    </section>
+                    <section>
+                        <h3>What Went Well</h3>
+                        <ul>
+                            <li class="fragment">The engagement level was high; people got excited about FP and continued the conversation/learning afterwards</li>
+                            <li class="fragment">Most (if not all) got the app running locally and in the cloud</li>
+                            <li class="fragment">Participants were able to complete some code challenges</li>
+                            <li class="fragment">We set the expectation at the start that we'd have to skip over detail and this set the tone; people commented at the end that it had been a good overview</li>
+                        </ul>    
+                    </section>
+                    <section>
+                        <h3>Issues Encountered</h3>
+                        <ul>
+                            <li class="fragment">There were some network issues and server errors; these are hard to predict</li>
+                            <li class="fragment">There was a lot of preliminary content to cover to help students understand the web app; this took longer than expected</li>
+                            <li class="fragment">Some (particularly Windows users) had trouble with their local environments; some had not come with a local database set-up, which meant they could only run the app in the cloud</li>
+                        </ul>    
+                    </section>
+                    <section>
+                        <h3>Lessons Learnt</h3>
+                        <ul>
+                            <li class="fragment">Dealing with environment issues can still be painful in a cloud workshop if people want to work locally; perhaps a cloud IDE set-up and deploy system would be preferable</li>
+                            <li class="fragment">Focusing on producing something (ie: a web app) means less time for learning base concepts; this is a trade-off</li>
+                            <li class="fragment">Trying to cover a number of things in a workshop (Haskell syntax, FP concepts, Haskell web libraries, PaaS) means you sacrifice depth &ndash; however, for some students, this is a win</li>
+                        </ul>    
+                    </section> 
+                </section>
+                <section>
+                    <h3>Teaching Opportunities</h3>
+                    <ul>
+                        <li>Lunchtime talks at your workplace</li>
+                        <li>Presenting at local Meetup groups (FP-focused, and otherwise)</li>
+                        <li>Conference presentations</li>
+                        <li>Running or coaching at a workshops</li>
+                        <li>Special events (eg: Clojure Bridge)</li>
+                        <li>Everyday workplace discussions</li>
+                    </ul>
+                </section>
+                <section>
+                    <h3>Conclusion</h3>
+                    <img src="images/explodecat.jpg" style="width: 600px;"/>
+                </section>
+                <section>
+                    <section>
+                        <h3>References and Credits</h3>
+                        <img src="images/readingdog.jpg" style="width: 600px;"/>
+                    </section>
+                    <section>
+                        <h3>References</h3>
+                        <ul style="font-size: 65%; line-height: 1em;">
+                            <li><a href="http://dl.acm.org/authorize?6968137" target="_blank">An Empirical Investigation into Programming Language Syntax, Andreas Stefik and Susanna Siebert, 2013</a></li>
+                            <li><a href="http://trove.nla.gov.au/work/9856647" target="_blank">An Introduction to Language, Victoria Fromkin et al., 2005, Nelson Thomson, pp. 304-351</a></li>
+                            <li><a href="http://www.seas.upenn.edu/~eas285/Readings/Pears_SurveyTeachingIntroProgramming.pdf" target="_blank">A Survey of Literature on the Teaching of Introductory Programming, Arnold Pears et al., 2007</a></li>
+                            <li><a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.126.4257&rep=rep1&type=pdf" target="_blank">A Theory of the Relationships between Cognitive Requirements of Computer Programming Languages and Programmers' Cognitive Characteristics, Garry L. White, 2002</a></li>
+                            <li><a href="http://www.ams.org/notices/201201/rtx120100010p.pdf" target="_blank">Debunking Myths About Gender and Mathematics Performance, Kane and Mertz, 2012</a></li>
+                            <li><a href="http://www.cs.indiana.edu/ftp/techreports/TR499.pdf" target="_blank">Experience with an Analytic Approach to Teaching Programming Languages, Christopher Haynes, 1997</a></li>
+                            <li><a href="http://images.forbes.com/forbesinsights/StudyPDFs/Innovation_Through_Diversity.pdf" target="_blank">Fostering Innovation Through a Diverse Workforce, Forbes Insights</a></li>
+                            <li><a href="http://programming.oreilly.com/2014/04/fun-functional-and-teachable.html" target="_blank">Fun, functional, and teachable?, Interview with Dave Thomas</a></li>
+                            <li><a href="http://hbr.org/2013/12/how-diversity-can-drive-innovation/ar/1" target="_blank">How Diversity Can Drive Innovation, Sylvia Ann Hewlett et al., 2013</a></li>
+                            <li><a href="http://www.learningunlimitedllc.com/wp-content/uploads/2014/01/Marzanos-9-Effective-Instructional-Strategies-@tysonkimberly2.png" target="_blank">Marzano's Nine Effective Instructional Strategies</a></li>
+                            <li><a href="http://www.amazon.com/The-Mother-Tongue-English-That/dp/0380715430" target="_blank">Mother Tongue, Bill Bryson, 1991, Penguin Books</a></li>
+                            <li><a href="http://www.csse.monash.edu.au/~damian/papers/PDF/SevenDeadlySins.pdf" target="_blank">Seven Deadly Sins of Introductory Programming Language Design, Linda McIver and Damian Conway, 1996</a></li>
+                            <li><a href="http://cs.brown.edu/~sk/Publications/Papers/Published/fffk-ts-project-journal/paper.pdf" target="_blank">The TeachScheme! Project: Computing and Programming for Every Student, Matthias Felleisen et al., 2003</a></li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h3>Image Credits</h3>
+                        <ul style="font-size: 80%; line-height: 1em;">
+                            <li><a href="http://www.engrish.com" target="_blank">Engrish.com</a></li>
+                            <li><a href="http://spl.smugmug.com/Humor/Lambdacats/i-4zrsdBk/A" target="_blank">'Explodid' Lambda Cat</a></li>
+                            <li><a href="https://www.flickr.com/photos/7313718@N03/5945302086" target="_blank">Reading Dog [cropped] (JPreisler, </a><a href="http://creativecommons.org/licenses/by-nc/2.0/legalcode" target="_blank">CC BY-NC 2.0)</a></li>
+                            <li><a href="http://www.zazzle.com.au/monad_shirt-235133473927904318" target="_blank">Zazzle.com.au Monad T-Shirt</a></li>
+                        </ul>
+                    </section>
+                </section>
+                <section>
+				    <h1>Lambda Lessons</h1>
+                    <img src="images/chalklambda.png" width="150px"/>
+                    <h3><a href="http://lessons.codemiller.com">lessons.codemiller.com</a></h3>
+                    <p>Katie Miller (<a href="http://twitter.com/codemiller" target="_blank">@codemiller</a>)</p>
+			    </section>
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'fade', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Parallax scrolling
+				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+				// parallaxBackgroundSize: '2100px 900px',
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
